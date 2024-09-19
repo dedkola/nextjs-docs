@@ -1,3 +1,27 @@
-# Welcome to Nextra
+---
+title: Memory Book
+---
+
+
+import Image from 'next/image'
+import kitty from '../public/kitty.jpg'
  
-Hello, world!
+export default function Responsive() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <Image
+        alt="kitty"
+        // Importing an image will
+        // automatically set the width and height
+        src={kitty}
+        sizes="100vw"
+        // Make the image display full width
+        style={{
+          align: 'center',
+          width: '50%',
+          height: 'auto',
+        }}
+      />
+    </div>
+  )
+}
