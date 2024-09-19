@@ -7,6 +7,7 @@ Windows WSL enables host mode networking in Windows WSL config
 ### Config file location
 
 Path to Configuration file
+
 ```
 C:\Users\<user>\.wslconfig
 ```
@@ -23,4 +24,3 @@ C:\Users\<user>\.wslconfig
 [wsl2]
 networkingMode=mirrored
 ```
-

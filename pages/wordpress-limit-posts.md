@@ -1,7 +1,7 @@
 ---
 title: Limit posts in WordPress in admin area
-
 ---
+
 ```
 function my_post_queries( $query ) {
 

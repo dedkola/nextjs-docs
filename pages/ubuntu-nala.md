@@ -2,8 +2,6 @@
 title: Ubuntu nala gnome tweaks install
 ---
 
-
-
 ```
 sudo apt update && sudo apt upgrade
 sudo apt install nala

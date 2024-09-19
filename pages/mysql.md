@@ -1,32 +1,34 @@
 ---
 tags:
-- MySQL
-- database
+  - MySQL
+  - database
 title: MySQL Database Import
 type: docs
 
-series: 
-- docs 
-- Wordpress
+series:
+  - docs
+  - Wordpress
 ---
 
 ### For quick large MySQL database import use:
 
 Manual mode by copy paste in terminal.
 
-```  {filename="Start of file"}
+```{filename="Start of file"}
 sed -i '1s/^/SET autocommit = 0;\n/' dump.sql
 
 
 ```
 
-```  {filename="End of file"}
+```{filename="End of file"}
 echo 'COMMIT;' >> dump.sql
 
 
 ```
+
 ### Or create bash script to run the above commands.
-```  {filename="#!/bin/bash"}
+
+```{filename="#!/bin/bash"}
 #!/bin/bash
 
 # Check if filename is provided as argument
