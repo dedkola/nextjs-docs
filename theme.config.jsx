@@ -37,5 +37,6 @@ export default {
       titleTemplate: '%s – Docs'
     }
   }
+}
 
 
