@@ -18,6 +18,7 @@ export default {
     link: 'https://github.com/dedkola'
 
   },
+
   lang: "en",
   head: (
     <>
@@ -31,6 +32,7 @@ export default {
       <meta property="og:url" content={useRouter().asPath} />
     </>
   ),
+  
   //add `Docs` to title
   useNextSeoProps() {
     return {
