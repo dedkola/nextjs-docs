@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 export default {
   logo: (
@@ -29,10 +28,10 @@ export default {
       <meta property="og:image" content="./public/logo.svg " />
 
 
-      <meta property="og:url" content={useRouter().asPath} />
+   
     </>
   ),
-  
+
   //add `Docs` to title
   useNextSeoProps() {
     return {
