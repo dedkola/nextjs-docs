@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default {
   logo: (
@@ -22,10 +23,12 @@ export default {
     <>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Nextra" />
+      <meta property="og:title" content="My docs memo" />
       <meta property="og:description" content="The next site builder" />
+      <meta property="og:image" content="./public/logo.svg " />
 
-    </>
+
+      <meta property="og:url" content={useRouter().asPath} />
 
   ),
   //add `Docs` to title
