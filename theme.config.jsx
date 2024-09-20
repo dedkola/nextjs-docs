@@ -29,7 +29,7 @@ export default {
 
 
       <meta property="og:url" content={useRouter().asPath} />
-
+    </>
   ),
   //add `Docs` to title
   useNextSeoProps() {
