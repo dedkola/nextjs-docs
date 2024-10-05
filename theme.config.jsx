@@ -17,24 +17,27 @@ export default {
     link: 'https://github.com/dedkola'
 
   },
+
   lang: "en",
   head: (
     <>
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta property="og:title" content="Nextra" />
+      <meta property="og:title" content="My docs memo" />
       <meta property="og:description" content="The next site builder" />
+      <meta property="og:image" content="./public/logo.svg " />
 
+
+   
     </>
-
   ),
+
   //add `Docs` to title
   useNextSeoProps() {
     return {
       titleTemplate: '%s – Docs'
     }
   }
-
-
 }
+
 
