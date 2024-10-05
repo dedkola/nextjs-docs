@@ -18,7 +18,7 @@ export default {
 
   },
 
-  lang: "en",
+  // lang: "en",
   head: (
     <>
 
