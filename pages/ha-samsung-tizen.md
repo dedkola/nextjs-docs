@@ -1,5 +1,5 @@
 ---
-Home Assisstant Yotube app run on Tizen OS
+Home Assisstant Youtube app run on Tizen OS
 ---
 
 ## Install HACS
