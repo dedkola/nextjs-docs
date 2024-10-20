@@ -1,0 +1,30 @@
+---
+title: Local VM Ubuntu with Proton VPN gateway
+---
+
+```bash
+sudo sysctl -w net.ipv4.ip_forward=1
+
+sudo nano /etc/sysctl.conf
+net.ipv4.ip_forward=1
+
+```
+
+### Iptables
+
+```bash
+sudo iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+
+
+```
+
+```bash
+sudo apt install iptables-persistent
+sudo service netfilter-persistent save
+
+sudo ufw allow in on tun0 from any to any
+sudo ufw allow out on tun0 from any to any
+
+
+
+```
