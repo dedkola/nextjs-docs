@@ -2,13 +2,15 @@
 title: WordPress RSS date time
 ---
 
-```js copy
-<lastBuildDate><?php echo mysql2date(' r', $post->post_date, false); ?></lastBuildDate>
+```php copy
+<lastBuildDate>
+    <?php echo mysql2date(' r', $post->post_date, false); ?>
+</lastBuildDate>
 ```
 
 another example:
 
-```js copy
+```php copy
 <pubDate>
     <?php echo mysql2date( 'D, d M Y H:i:s +0300', 
     get_post_time( 'Y-m-d H:i:s', true ), false ); ?>
