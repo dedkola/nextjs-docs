@@ -1,0 +1,26 @@
+---
+title: WSL enable host mode networking
+---
+
+Windows WSL enables host mode networking in Windows WSL config
+
+### Config file location
+
+Path to Configuration file
+
+```bash copy
+C:\Users\<user>\.wslconfig
+```
+
+### Run in terminal
+
+```bash copy
+.wslconfig
+```
+
+### Enable host mode networking
+
+```bash copy
+[wsl2]
+networkingMode=mirrored
+```
