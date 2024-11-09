@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export default {
   index: "My Homepage",
   github_link: {
