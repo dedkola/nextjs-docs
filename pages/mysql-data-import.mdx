@@ -14,21 +14,21 @@ series:
 
 Manual mode by copy paste in terminal.
 
-```{filename="Start of file"}
+### Start of file
+
+```bash copy
 sed -i '1s/^/SET autocommit = 0;\n/' dump.sql
-
-
 ```
+### End of file
 
-```{filename="End of file"}
+```bash copy
 echo 'COMMIT;' >> dump.sql
-
 
 ```
 
 ### Or create bash script to run the above commands.
 
-```{filename="#!/bin/bash"}
+```bash copy
 #!/bin/bash
 
 # Check if filename is provided as argument

@@ -4,7 +4,7 @@ title: Custom base RSS feed for WordPress
 
 Set UTC +3 time zone
 
-```
+```php copy
 <?php
 header('Content-Type: application/rss+xml; charset=UTF-8');
 
@@ -72,7 +72,7 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>';
 Creteate a new feed custom.pnpg file in the theme folder.
 function.php:
 
-```
+```php copy
 
 
 function custom_feed_init() {
