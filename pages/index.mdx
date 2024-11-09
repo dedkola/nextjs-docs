@@ -2,26 +2,13 @@
 title: Memory Book
 ---
 
+import Image from "next/image";
+import ImageGallery from "../components/ImageGallery";
 
-import Image from 'next/image'
-import kitty from '../public/kitty.jpg'
- 
 export default function Responsive() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <Image
-        alt="kitty"
-        // Importing an image will
-        // automatically set the width and height
-        src={kitty}
-        sizes="100vw"
-        // Make the image display full width
-        style={{
-          align: 'center',
-          width: '50%',
-          height: 'auto',
-        }}
-      />
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <ImageGallery />
     </div>
-  )
+  );
 }
