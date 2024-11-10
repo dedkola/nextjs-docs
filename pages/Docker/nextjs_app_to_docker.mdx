@@ -1,0 +1,51 @@
+---
+title: Docker build image with Node.js app
+---
+
+Files [here](https://github.com/dedkola/salsa/tree/main/Docker/nextjs_to_docker_container)
+
+### Docker-compose.yaml
+
+```yaml copy
+version: "3"
+
+services:
+  nextra-docs:
+    build: .
+    ports:
+      - "5000:3000"
+    environment:
+      - NODE_ENV=production
+```
+
+### Dockerfile
+
+```docker copy
+FROM node:20-bullseye
+
+WORKDIR /app
+RUN apt update && apt install git
+
+RUN apt update && apt install -y git && rm -rf /var/lib/apt/lists/*
+
+RUN rm -rf /app/* && if [ ! -d "/app/.git" ]; then git clone https://github.com/dedkola/nextjs-docs.git /app; else cd /app && git pull; fi
+
+
+RUN npm install
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+
+```
+
+### Build image
+
+```bash copy
+docker build -t nextjs . --no-cache
+```
+
+### Run on 5000 port
+
+```bash copy
+docker run -p 5001:3000 -d nextjs
+```
