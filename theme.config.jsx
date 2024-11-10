@@ -18,7 +18,7 @@ export default {
   },
 
   docsRepositoryBase:
-    "https://github.com/dedkola/nextjs-example-docs/tree/main/",
+    "https://github.com/dedkola/nextjs-example-docs/tree/main",
 
   // lang: "en",
   head: (
