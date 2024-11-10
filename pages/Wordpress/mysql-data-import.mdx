@@ -19,18 +19,17 @@ Manual mode by copy paste in terminal.
 ```bash copy
 sed -i '1s/^/SET autocommit = 0;\n/' dump.sql
 ```
+
 ### End of file
 
 ```bash copy
 echo 'COMMIT;' >> dump.sql
-
 ```
 
 ### Or create bash script to run the above commands.
 
 ```bash copy
 #!/bin/bash
-
 # Check if filename is provided as argument
 if [ $# -eq 0 ]; then
     echo "Usage: $0 <filename>"
@@ -46,5 +45,4 @@ sed -i '1s/^/SET autocommit = 0;\n/' "$filename"
 echo 'COMMIT;' >> "$filename"
 
 echo "Now import it. quickly :)"
-
 ```
