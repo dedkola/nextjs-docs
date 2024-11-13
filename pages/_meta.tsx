@@ -1,10 +1,5 @@
 export default {
   index: "My Homepage",
-  github_link: {
-    title: "Docs Github",
-    href: "https://github.com/dedkola/nextjs-docs",
-    newWindow: true,
-  },
 
   Docker: {
     title: "Docker",
