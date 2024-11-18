@@ -1,10 +1,10 @@
 ---
-title: MicroK8s install with helm and oneDev
+title: MicroK8s install with Helm and OneDev
 ---
 
 ## install k8s
 
-```
+```bash copy
 sudo snap install microk8s --classic
 microk8s status --wait-ready
 microk8s enable dashboard
@@ -19,7 +19,7 @@ microk8s enable istio
 
 ### Check status
 
-```
+```bash copy
 microk8s kubectl get all --all-namespaces
 microk8s kubectl get svc
 microk8s kubectl get pods -n metallb-system
@@ -28,39 +28,32 @@ microk8s helm list -n onedev
 microk8s kubectl get events -n onedev
 microk8s kubectl get pods -n onedev
 microk8s kubectl describe node
-
 ```
 
-### install helm
+### Install helm
 
-```
+```bash copy
 snap install helm --classic
 helm repo add onedev https://dl.cloudsmith.io/public/onedev/onedev/helm/charts
 helm repo update onedev
 ```
 
-### Configure kubectl to Use MicroK8s Context
+### Configure kubectl to use MicroK8s
 
-```
+```bash copy
 sudo microk8s kubectl config view --raw > ~/.kube/config
 snap install kubectl --classic
 kubectl get nodes
-
 ```
 
-### install onedev
+### Install OneDev
 
-```
+```bash copy
 helm install onedev onedev/onedev -n onedev --create-namespace
-
-
 ```
 
-### exspose to lan onedev pod
+### Exspose to lan OneDev pod
 
-```
-
+```bash copy
 helm upgrade onedev onedev/onedev -n onedev --set service.type=LoadBalancer --reuse-values
-
-
 ```
