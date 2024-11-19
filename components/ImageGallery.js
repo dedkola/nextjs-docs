@@ -1,5 +1,6 @@
 // components/ImageGallery.js
 import { useState, useEffect } from "react";
+import Image from "next/image";
 const ImageGallery = () => {
   // List of image URLs (replace with your actual image URLs)
   const images = [
@@ -40,11 +41,13 @@ const ImageGallery = () => {
       <div className="grid grid-cols-3 gap-4">
         {shuffledImages.map((image, index) => (
           <div key={index} className="overflow-hidden rounded-lg shadow-lg">
-            <img
+            <Image
+              width="266"
+              height="150"
               src={image}
               alt={`Image ${index + 1}`}
               className="w-full h-auto object-cover"
-            />
+            ></Image>
           </div>
         ))}
       </div>
