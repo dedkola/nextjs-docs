@@ -1,15 +1,15 @@
 ---
-
 title: Make Ubuntu Great again
-
 ---
 
 ## Disable app_armor
 
 ```bash copy
-/etc/default/grub 
+nano /etc/default/grub
 
-GRUB_CMDLINE_LINUX="apparmor=0" 
+GRUB_CMDLINE_LINUX="apparmor=0"
+
+sudo update-grub
 
 ```
 
