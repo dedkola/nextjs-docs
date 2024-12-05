@@ -42,6 +42,7 @@ const ImageGallery = () => {
         {shuffledImages.map((image, index) => (
           <div key={index} className="overflow-hidden rounded-lg shadow-lg">
             <Image
+                loading="lazy"
               width="266"
               height="150"
               src={image}

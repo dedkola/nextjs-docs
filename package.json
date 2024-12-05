@@ -2,9 +2,11 @@
   "dependencies": {
     "@mdx-js/loader": "3.1.0",
     "@next/mdx": "15.0.3",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "next": "^15.0.3",
-    "nextra": "3.2.3",
-    "nextra-theme-docs": "3.2.3",
+    "nextra": "^3.2.4",
+    "nextra-theme-docs": "^3.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1"
   },
