@@ -2,7 +2,7 @@
 title: Install Jenkins Helm on Microk8s Metallb
 ---
 
-```
+```bash copy
 helm repo add jenkins https://charts.jenkins.io
 helm repo update
 
@@ -10,20 +10,20 @@ helm repo update
 
 ### Deploy
 
-```
+```bash copy
 helm install jenkins jenkins/jenkins --namespace jenkins --create-namespace --set controller.serviceType=LoadBalancer
 
 ```
 
-### get ip
+### Get IP
 
-```
+```bash copy
 kubectl get services -n jenkins
 ```
 
 ### get password
 
-```
+```bash copy
 printf $(kubectl get secret --namespace jenkins jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
 
 ```

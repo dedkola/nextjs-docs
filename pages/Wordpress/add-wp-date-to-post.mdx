@@ -8,11 +8,11 @@ title: WordPress RSS date time
 </lastBuildDate>
 ```
 
-another example:
+### Another example:
 
 ```php copy
 <pubDate>
-    <?php echo mysql2date( 'D, d M Y H:i:s +0300', 
+    <?php echo mysql2date( 'D, d M Y H:i:s +0300',
     get_post_time( 'Y-m-d H:i:s', true ), false ); ?>
 </pubDate>
 ```
