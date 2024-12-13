@@ -2,14 +2,7 @@
 title: Update to NextJs 15 slug params
 ---
 
-On using slug params got error
-
-```bash copy
-
-Type error: Type '{ params: { docSlug: string; }; }' does not satisfy the constraint 'PageProps'. Types of property 'params' are incompatible.
-```
-
-function like this
+Function like this
 
 ```typescript copy
 export default async function Docs({
@@ -22,6 +15,13 @@ export default async function Docs({
     "utf-8"
   );
 }
+```
+
+On using slug params got error
+
+```bash copy
+
+Type error: Type '{ params: { docSlug: string; }; }' does not satisfy the constraint 'PageProps'. Types of property 'params' are incompatible.
 ```
 
 ### Easy fix based on upgrade guide https://nextjs.org/docs/app/building-your-application/upgrading/version-15#async-request-apis-breaking-change
